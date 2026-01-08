@@ -28,7 +28,7 @@ app.use(async (req, res, next) => {
 });
 // ✅ CORS setup - environment-aware
 const allowedOrigins = isDev
-  ? ["http://localhost:5173", "http://localhost:5000", "http://127.0.0.1:5173"]
+  ? ["http://localhost:5173", "http://localhost:8000", "http://127.0.0.1:5173"]
   : (process.env.ALLOWED_ORIGINS || "https://yourdomain.com").split(",").map(origin => origin.trim());
 
 const corsOptions = {
